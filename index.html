@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lev3_1_projekt_js-vertiefung_mehrwertsteuer-rechner </title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <form action="" onsubmit="return false">
+        <h4>Was soll berechnet werden?</h4>
+        <div>
+            <input type="radio" name="WhichCalc" id="nettoZuBrutto" onchange="changeForm()">
+            <label for="nettoZuBrutto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+        </div>
+        <div>
+            <input type="radio" name="WhichCalc" id="bruttoZuNetto" onchange="changeForm()">
+            <label for="bruttoZuNetto">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+        </div>
+        <div class="border"></div>
+        <!-- nächster abschnitt-->
+        <h4>Mehrwertsteuersatz</h4>
+        <input type="radio" name="Steuersatz" id="taxNineteen">
+        <label for="taxNineteen">19 %</label>
+        <input type="radio" name="Steuersatz" id="taxSeven">
+        <label for="taxSeven">7 %</label>
+        <div class="border"></div>
+        <!-- nächster abschnitt-->
+        <h4 id="amount">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro</h4>
+        <input type="number" name="" id="amountInput">
+        <h4 id="amountInput2"></h4>
+        <button type="submit" id="button" onclick="calculate()">berechnen</button>
+        <h4 id="nope"></h4>
+        <div class="border2"></div>
+        <!-- nächster abschnitt-->
+        <h3>Ergebnis</h3>
+        <h4>Mehrwertsteuerbetrag</h4>
+        <h4 id="mwst"> - </h4>
+        <div class="border"></div>
+        <!-- nächster abschnitt-->
+        <h4 id="betrag">Bruttobetrag (Endpreis)</h4>
+        <h4 id="Ende"> - </h4>
+
+    </form>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
